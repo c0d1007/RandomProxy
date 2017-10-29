@@ -1,7 +1,7 @@
 # RandomProxy
 
 
-From the Internet to capture a large number of proxy IP, and then through the agent cascade to achieve random forwarding traffic. Compatible with most support HTTP / HTTPS proxy procedures, such as Sqlmap, Burpsuite, FireFox, you can also run on Linux, Windows, MacOS.
+Capture a large number of proxy IP From the Internet, and then through the agent cascade to achieve random forwarding traffic. Compatible with most support HTTP / HTTPS proxy procedures, such as Sqlmap, Burpsuite, FireFox, you can also run on Linux, Windows, MacOS.
 ```
 Usage: python random_proxy.py [-H 127.0.0.1] [-p 8888] [-c 0] [-a http://127.0.0.1:8000] [-t 0] [-p 2]
 
@@ -16,7 +16,7 @@ Options:
   -c CHANGE, --change=CHANGE
                         [RandomProxy] Default (0); (0): every request has a
                         new IP; (60): Change IP every 60 seconds  ;  (less
-                        than 0): request 127.0.0.1:8888/next to cahnge IP
+                        than 0): request 127.0.0.1:8888/next to change IP
   -a ADDRESS, --address=ADDRESS
                         [IPProxyPool] The IPProxyPool api url;default
                         http://127.0.0.1:8000
