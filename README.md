@@ -1,5 +1,7 @@
 # RandomProxy
-       从互联网上抓取大量的免费代理IP构建一个代理池,然后使用Python写一个HTTP/HTTPS代理,通过代理级联的方式来实现随机流量转发.
+
+
+##From the Internet to capture a large number of proxy IP, and then through the agent cascade to achieve random forwarding traffic. Compatible with most support HTTP / HTTPS proxy procedures, such as Sqlmap, Burpsuite, FireFox, you can also run on Linux, Windows, MacOS.
 ```
 Usage: python random_proxy.py [-H 127.0.0.1] [-p 8888] [-c 0] [-a http://127.0.0.1:8000] [-t 0] [-p 2]
 
@@ -24,10 +26,25 @@ Options:
                         [IPProxyPool] HTTP/HTTPS proxy you want ? (0): http,
                         (1) https, (2) http/https(default)
 ```
-项目参考
+Install 
+```
+1. random_proxy
+pip install request tornado pycurl
+2. IPProxyPool
+Refer https://github.com/qiyeboy/IPProxyPool
+```
+
+Reference
 ```
 qiyeboy/IPProxyPool: IPProxyPool代理池项目，提供代理ip
 https://github.com/qiyeboy/IPProxyPool
 rfyiamcool/toproxy: 😈 high performance simple tornado http proxy.
 https://github.com/rfyiamcool/toproxy
+```
+PS
+```
+if something worry on windows,
+because that pycurl not support python 64bit on windows.
+you can install python3 32 bit to solove it.
+
 ```
