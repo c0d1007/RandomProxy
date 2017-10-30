@@ -25,7 +25,7 @@ pip install requests chardet web.py sqlalchemy gevent
 pip install lxml
 # Or [lxml windows](https://pypi.python.org/pypi/lxml/)
 ```
-
+Usage
 ```
 Usage: python random_proxy.py [-H 127.0.0.1] [-p 8888] [-c 0] [-a http://127.0.0.1:8000] [-t 0] [-p 2]
 
