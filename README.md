@@ -62,5 +62,5 @@ PS
 ```
 if something wrong on windows,
 because that pycurl not support python2 64bit on windows.
-you can install python2 32bit to solove it.
+you can install python2 32bit to solve it.
 ```
