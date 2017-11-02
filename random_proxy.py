@@ -56,7 +56,7 @@ def cmd_help():
                     dest="change",
                     type=int,
                     default=0,
-                    help="[RandomProxy] Default (0); (0): every request has a new IP; (60): Change IP every 60 seconds  ;  (less than 0): request 127.0.0.1:8888/next to cahnge IP")
+                    help="[RandomProxy] Default (0); (0): every request has a new IP; (60): Change IP every 60 seconds  ;  (less than 0): request 127.0.0.1:8888/next to change IP")
     opt.add_option('-a','--address',
                     dest="address",
                     type=str,
@@ -223,7 +223,7 @@ class DetailHandler(tornado.web.RequestHandler):
             upstream.read_until('\r\n\r\n', on_proxy_response)          
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0)
         upstream = tornado.iostream.IOStream(s)
-        proxy = get_proxy(self.request.uri)
+        proxy = get_proxy()
         if proxy:
             proxy_host, proxy_port = proxy[0],proxy[1]
             upstream.connect((proxy_host, proxy_port), start_proxy_tunnel)

@@ -122,8 +122,8 @@ API_PORT = 8000
 爬虫爬取和检测ip的设置条件
 不需要检测ip是否已经存在，因为会定时清理
 '''
-UPDATE_TIME = 30 * 60  # 每半个小时检测一次是否有代理ip失效
-MINNUM = 50  # 当有效的ip值小于一个时 需要启动爬虫进行爬取
+UPDATE_TIME = 10 * 60  # 每半个小时检测一次是否有代理ip失效
+MINNUM = 500  # 当有效的ip值小于一个时 需要启动爬虫进行爬取
 
 TIMEOUT = 5  # socket延时
 '''
@@ -184,7 +184,7 @@ def get_header():
         'Accept-Encoding': 'gzip, deflate',
     }
 #默认给抓取的ip分配20分,每次连接失败,减一分,直到分数全部扣完从数据库中删除
-DEFAULT_SCORE=10
+DEFAULT_SCORE=6
 
 TEST_URL = 'http://ip.chinaz.com/getip.aspx'
 TEST_IP = 'http://httpbin.org/ip'
